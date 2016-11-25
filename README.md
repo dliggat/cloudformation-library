@@ -18,3 +18,23 @@ Deletes a stack with the given name.
 ```bash
 STACK_NAME=foobar make delete
 ```
+
+## Scaffold a Function
+
+```bash
+FUNCTION=whatever make scaffold
+```
+
+Results in the following:
+
+```bash
+lambdas
+└── whatever_package
+    ├── index.py          # Function entry point.
+    ├── requirements
+    │   ├── common.txt    # Common dependencies.
+    │   ├── dev.txt       # Local development dependencies.
+    │   └── lambda.txt    # Runtime dependencies.
+    └── whatever          # Modules go here.
+```
+
