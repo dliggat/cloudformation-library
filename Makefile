@@ -1,5 +1,8 @@
 TEMPLATES_DIR := templates
+TEMPLATE_EXTENSION := yaml
 PARAMETERS_DIR := parameters
+PARAMETER_EXTENSION := json
+
 
 
 .PHONY: provision delete
@@ -9,12 +12,11 @@ OPERATION=$(shell aws cloudformation describe-stacks --stack-name $(STACK_NAME) 
 provision:
 	aws cloudformation $(OPERATION) \
 	  --stack-name $(STACK_NAME) \
-	  --template-body file://$(TEMPLATES_DIR)/$(TEMPLATE).yaml \
-	  --parameters file://$(PARAMETERS_DIR)/$(PARAMS).json \
+	  --template-body file://$(TEMPLATES_DIR)/$(TEMPLATE).$(TEMPLATE_EXTENSION) \
+	  --parameters file://$(PARAMETERS_DIR)/$(PARAMS).$(PARAMETER_EXTENSION) \
 	  --capabilities CAPABILITY_IAM
 
 
 delete:
 	aws cloudformation delete-stack \
 	  --stack-name $(STACK_NAME)
-
