@@ -1,0 +1,18 @@
+[
+  {
+    "ParameterKey": "ResourcePrefix",
+    "ParameterValue": "BasicFunction"
+  },
+  {
+    "ParameterKey": "ScheduleExpression",
+    "ParameterValue": "rate(24 hours)"
+  },
+  {
+    "ParameterKey": "Timeout",
+    "ParameterValue": "120"
+  },
+  {
+    "ParameterKey": "MemorySize",
+    "ParameterValue": "128"
+  }
+]
