@@ -27,7 +27,9 @@ define INDEX_BODY
 import logging
 import os
 
-# from $(FUNCTION) import *
+# Module imports, if any, go here.
+# from $(FUNCTION) import module1
+# from $(FUNCTION) import module2
 
 logging.basicConfig()
 logger = logging.getLogger(__name__)
@@ -44,9 +46,6 @@ if __name__ == '__main__':
 endef
 export INDEX_BODY
 
-foo:
-	@echo "$$INDEX_BODY" > foo.txt
-
 scaffold:
 	test -n "$(FUNCTION)" || { echo "No FUNCTION given!"; exit 1; }
 	test ! -d $(FUNCTIONS_DIR)/$(FUNCTION)_package || { echo "$(FUNCTION)_package already exists!"; exit 1; }
@@ -60,4 +59,8 @@ scaffold:
 	echo "-r common.txt" >> $(FUNCTIONS_DIR)/$(FUNCTION)_package/requirements/lambda.txt
 	mkdir -p $(FUNCTIONS_DIR)/$(FUNCTION)_package/$(FUNCTION)
 	echo "$$INDEX_BODY" > $(FUNCTIONS_DIR)/$(FUNCTION)_package/index.py
+
+invoke:
+	test -n "$(FUNCTION)" || { echo "No FUNCTION given!"; exit 1; }
+	python $(FUNCTIONS_DIR)/$(FUNCTION)_package/index.py
 
