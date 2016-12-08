@@ -5,7 +5,7 @@
   },
   {
     "ParameterKey": "ScheduleExpression",
-    "ParameterValue": "rate(24 hours)"
+    "ParameterValue": "never"
   },
   {
     "ParameterKey": "Timeout",
