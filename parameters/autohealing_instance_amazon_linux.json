@@ -1,0 +1,34 @@
+[
+  {
+    "ParameterKey": "ResourcePrefix",
+    "ParameterValue": "Standard"
+  },
+  {
+    "ParameterKey": "VpcExportIdentifier",
+    "ParameterValue": "Standard-VpcId"
+  },
+  {
+    "ParameterKey": "SubnetAZ0ExportIdentifier",
+    "ParameterValue": "Standard-PublicSubnetAZ0"
+  },
+  {
+    "ParameterKey": "SubnetAZ1ExportIdentifier",
+    "ParameterValue": "Standard-PublicSubnetAZ1"
+  },
+  {
+    "ParameterKey": "AssociatePublicIpAddress",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "KeypairName",
+    "ParameterValue": "dliggat-tam"
+  },
+  {
+    "ParameterKey": "AmiId",
+    "ParameterValue": "ami-5ec1673e"
+  },
+  {
+    "ParameterKey": "InstanceType",
+    "ParameterValue": "t2.medium"
+  }
+]
