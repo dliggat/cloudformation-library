@@ -5,7 +5,6 @@ Description: "Vpc"
 Parameters:
   ResourcePrefix:
     Type: String
-    Default: "dliggat"
 
   VpcCidr:
     Type: String
@@ -104,6 +103,7 @@ Resources:
     Properties:
       VpcId: { Ref: Vpc }
       AvailabilityZone: { "Fn::Select": [ "0", { "Fn::GetAZs": "" } ] }
+      MapPublicIpOnLaunch: "true"
       CidrBlock: { Ref: PublicSubnetAZ0Cidr }
       Tags:
         - Key: Name
@@ -144,6 +144,7 @@ Resources:
     Properties:
       VpcId: { Ref: Vpc }
       AvailabilityZone: { "Fn::Select": [ "1", { "Fn::GetAZs": "" } ] }
+      MapPublicIpOnLaunch: "true"
       CidrBlock: { Ref: PublicSubnetAZ1Cidr }
       Tags:
         - Key: Name
