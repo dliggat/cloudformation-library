@@ -1,23 +1,19 @@
 [
   {
     "ParameterKey": "ResourcePrefix",
-    "ParameterValue": "Standard"
+    "ParameterValue": "dliggat-tam-testbed"
   },
   {
     "ParameterKey": "VpcExportIdentifier",
-    "ParameterValue": "Standard-VpcId"
+    "ParameterValue": "dliggat-tam-testbed-VpcId"
   },
   {
     "ParameterKey": "SubnetAZ0ExportIdentifier",
-    "ParameterValue": "Standard-PublicSubnetAZ0"
+    "ParameterValue": "dliggat-tam-testbed-PublicSubnetAZ0"
   },
   {
     "ParameterKey": "SubnetAZ1ExportIdentifier",
-    "ParameterValue": "Standard-PublicSubnetAZ1"
-  },
-  {
-    "ParameterKey": "AssociatePublicIpAddress",
-    "ParameterValue": "true"
+    "ParameterValue": "dliggat-tam-testbed-PublicSubnetAZ1"
   },
   {
     "ParameterKey": "KeypairName",

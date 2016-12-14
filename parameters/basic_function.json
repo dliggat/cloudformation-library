@@ -1,11 +1,11 @@
 [
   {
     "ParameterKey": "ResourcePrefix",
-    "ParameterValue": "BasicFunction"
+    "ParameterValue": "dliggat-tam-testbed-lambda"
   },
   {
     "ParameterKey": "ScheduleExpression",
-    "ParameterValue": "never"
+    "ParameterValue": ""
   },
   {
     "ParameterKey": "Timeout",

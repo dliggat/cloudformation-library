@@ -15,9 +15,6 @@ Parameters:
   SubnetAZ1ExportIdentifier:
     Type: String
 
-  AssociatePublicIpAddress:
-    Type: String
-
   KeypairName:
     Type: AWS::EC2::KeyPair::KeyName
 
@@ -43,6 +40,16 @@ Resources:
             Principal:
               Service:
                 - ec2.amazonaws.com
+      Path: /
+      Policies:
+        - PolicyName: GetObjects
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "s3:GetObject"
+                Resource: "arn:aws:s3:::*/*"
 
   IamProfile:
     Type: AWS::IAM::InstanceProfile
@@ -85,7 +92,7 @@ Resources:
       KeyName: { Ref: KeypairName }
       IamInstanceProfile: { Ref: IamProfile }
       InstanceType: { Ref: InstanceType }
-      AssociatePublicIpAddress: { Ref: AssociatePublicIpAddress }
+      # AssociatePublicIpAddress: { Ref: AssociatePublicIpAddress }
       SecurityGroups:
         - { Ref: SecurityGroup }
       UserData:

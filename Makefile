@@ -2,6 +2,8 @@ TEMPLATES_DIR := templates
 TEMPLATE_EXTENSION := yaml
 PARAMETERS_DIR := parameters
 PARAMETER_EXTENSION := json
+TAGS_DIR := tags
+TAGS_EXTENSION := json
 FUNCTIONS_DIR := lambdas
 
 
@@ -15,6 +17,7 @@ provision:
 	  --stack-name $(STACK_NAME) \
 	  --template-body file://$(TEMPLATES_DIR)/$(TEMPLATE).$(TEMPLATE_EXTENSION) \
 	  --parameters file://$(PARAMETERS_DIR)/$(PARAMS).$(PARAMETER_EXTENSION) \
+	  --tags file://$(TAGS_DIR)/$(TAGS).$(TAGS_EXTENSION) \
 	  --capabilities CAPABILITY_IAM
 
 delete:
