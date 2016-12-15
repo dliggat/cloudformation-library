@@ -92,7 +92,6 @@ Resources:
       KeyName: { Ref: KeypairName }
       IamInstanceProfile: { Ref: IamProfile }
       InstanceType: { Ref: InstanceType }
-      # AssociatePublicIpAddress: { Ref: AssociatePublicIpAddress }
       SecurityGroups:
         - { Ref: SecurityGroup }
       UserData:
@@ -102,7 +101,7 @@ Resources:
             - - "#!/bin/bash"
               - ""
               - "yum update -y"
-              - "yum install -y git sl"
+              - "yum install -y git sl gcc"
 
   Asg:
     Type: AWS::AutoScaling::AutoScalingGroup

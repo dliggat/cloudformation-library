@@ -11,19 +11,15 @@ Parameters:
 
   PublicSubnetAZ0Cidr:
     Type: String
-    Default: "10.0.0.0/24"
 
   PrivateSubnetAZ0Cidr:
     Type: String
-    Default: "10.0.3.0/24"
 
   PublicSubnetAZ1Cidr:
     Type: String
-    Default: "10.0.1.0/24"
 
   PrivateSubnetAZ1Cidr:
     Type: String
-    Default: "10.0.4.0/24"
 
 
 Resources:
