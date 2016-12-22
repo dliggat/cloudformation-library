@@ -17,15 +17,15 @@ Parameters:
 
   PrivateSubnetAZ0Cidr:
     Type: String
-    Description: A subnet CIDR e.g. "10.0.3.0/16"
+    Description: A subnet CIDR e.g. "10.0.3.0/24"
 
   PublicSubnetAZ1Cidr:
     Type: String
-    Description: A subnet CIDR e.g. "10.0.1.0/16"
+    Description: A subnet CIDR e.g. "10.0.1.0/24"
 
   PrivateSubnetAZ1Cidr:
     Type: String
-    Description: A subnet CIDR e.g. "10.0.4.0/16"
+    Description: A subnet CIDR e.g. "10.0.4.0/24"
 
 
 Resources:
