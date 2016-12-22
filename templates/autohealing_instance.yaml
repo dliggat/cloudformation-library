@@ -101,7 +101,7 @@ Resources:
             - - "#!/bin/bash"
               - ""
               - "yum update -y"
-              - "yum install -y git sl gcc"
+              - "yum install -y git sl gcc mysql postgresql95-devel"
 
   Asg:
     Type: AWS::AutoScaling::AutoScalingGroup

@@ -1,7 +1,7 @@
 [
   {
     "ParameterKey": "ResourcePrefix",
-    "ParameterValue": "dliggat-tam-testbed"
+    "ParameterValue": "tam-testbed"
   },
   {
     "ParameterKey": "VpcCidr",
