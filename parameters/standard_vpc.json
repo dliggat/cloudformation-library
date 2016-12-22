@@ -1,7 +1,7 @@
 [
   {
     "ParameterKey": "ResourcePrefix",
-    "ParameterValue": "tam-testbed"
+    "ParameterValue": "vc-experiments"
   },
   {
     "ParameterKey": "VpcCidr",
